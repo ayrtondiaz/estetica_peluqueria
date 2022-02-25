@@ -45,7 +45,35 @@ footer{
     grid-area: footer;
 }
 /*Desktop*/
+.opacidad{
+    animation-name: opacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 3s;
+}
+@keyframes opacity {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
 
+.grande-pequeño{
+    animation: tamaño 1s ease-in ;
+}
+@keyframes tamaño{
+    0%{transform: scale(2,2);}
+    50%{transform: scale(0,0);}
+    100%{transform: scale(1,1);}
+}
+@keyframes titilar {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.titilar{
+	animation-name: titilar;
+	animation-iteration-count: infinite;
+	animation-delay: 2s;
+	animation-duration: 1s;
+}
 @media only screen and (min-width: 1024px)
 {
     /*HEADER*/
