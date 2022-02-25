@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+
+</head>
+<body>
+    <header class="grid-header-new">
+        <div class="header-logo">
+            <img src="../assets/img/logo.png" alt="logo" class="logoImagen">
+        </div>                
+        <nav class="header-grid-nav">
+            <ul class="grid-nav" >
+                <li><a class="grid-nav nav-color" href="../index.html">Inicio</a></li>
+                <li><a class="grid-nav nav-color" href="../views/servicios.html">Servicios</a></li>
+                <li><a class="grid-nav nav-color" href="../views/nosotros.html">Nosotros</a></li>
+                <li><a class="grid-nav nav-color" href="../views/contacto.html">Contacto</a></li>
+                <li><a class="grid-nav nav-color" href="../views/ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="grid-main-contacto">
+        <div class="titulo-contacto">
+            <h2 class="titulo-contacto-txt">CONTACTO</h2>
+        </div>
+        <form action="submit" class="grid-contacto">
+            
+                <label class="contacto-item" for="nombre">Nombre y Apellido
+                    <input type="text" placeholder="Ejemplo: Juana Viale" name="nombre">
+                </label>
+                <label class="contacto-item" for="servicio">Servicio a seleccionar
+                   <select name="servicio" id="servicio">
+                       <option value="s1">Uñas</option>
+                       <option value="s2">Balayage</option>
+                       <option value="s3">Pestañas</option>
+                   </select>
+                </label>
+                <label class="contacto-item" for="pago">Método de Pago
+                    <select name="pago" id="pago">
+                        <option value="p1">Mercado Pago</option>
+                        <option value="p2">Transferencia</option>
+                        <option value="p3">Efectivo</option>
+                    </select>
+                 </label>
+                 <label class="contacto-item" for="correo">Correo Electronico
+                     <input type="text" placeholder="tucorreo@gmail.com" name="correo">
+                 </label>
+                <button class="">
+                     ENVIAR
+                     <img src="../assets/img/whatsapp.png" alt="Whattasp" style="width: 50px; height:50px ;">
+                </button>
+            
+
+        </form>
+    </main>
+    <footer class="grid-foo">
+        <div class="grid-logo-foo">
+            <img src="../assets/img/logo.png" alt="" class="logo-foo-principal img-60 center">
+            <img src="../assets/img/estetica.png" alt="" class="logo-foo-sub img-60 center">
+        </div>
+        <div class="grid-rrss-foo">
+            <div class="titulo-foo">
+                <h3 class="titulo-foo-txt">COMUNICATE CON NUETRAS REDES</h3>
+            </div>
+            <div class="grid-redes-foo">
+                <div class="footer_whatsapp center">
+                    <h4 class="font-redes"><a href="https://web.whatsapp.com/">3871297348</a></h4>
+                    <img src="../assets/img/whatsapp.png" alt="Whattasp" class="imgRrss w">
+                </div>
+                <div class="footer_instagram center">
+                    <h4 class="font-redes"><a href="https://www.instagram.com/">estetica.bresh</a></h4>
+                    <img src="../assets/img/instagram.png" alt="Instagram" class="imgRrss i">
+                </div>
+                <div class="footer_facebook center">
+                    <h4 class="font-redes"><a href="https://www.facebook.com/">Estética Bresh</a></h4>
+                    <img src="../assets/img/facebook.png" alt="Facebook" class="imgRrss f">
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+</body>
+</html>

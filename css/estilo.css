@@ -1,0 +1,1263 @@
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(54, 177, 253);
+}
+@font-face {
+    font-family: 'chalet';
+    src: url("../assets/fonts/CHALET-NEW-YORK-NINETEEN-SEVENTY.OTF");
+}
+*{font-family: 'chalet';}
+.logoImagen{
+    width: 150px;
+}
+.imgRrss{
+    width: 100px;
+}
+h3{
+    color: saddlebrown;
+}
+.img-100{
+    width: 100%;
+    height: auto;
+}
+/*PAGES*/
+.contenedor-inicio-nosotros{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+/*Desktop*/
+
+@media only screen and (min-width: 1024px)
+{
+    /*HEADER*/
+    .grid-header-new{
+        grid-area: header;
+        display: grid;
+        grid-area:
+        "logo nav";
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto;
+        position: sticky;
+        top: 0;
+        border: inset 5px white;
+        background-color: lightcoral;
+        padding: 15px;
+    }
+    .logoImagen{
+        grid-area: logo;
+    }
+    .grid-nav{
+        grid-area: nav;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-color{
+        color: white;
+    }
+    /*MAIN HOME*/
+    .grid-main{
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+        "carrusel"
+        "card" ;
+        grid-template-columns: 100% ;
+        grid-template-rows: auto auto;
+    }
+    .grid-carrusel{
+        grid-area: carrusel;
+        display: grid;
+        grid-template-areas: 
+        "imgVizq imgC imgC imgVder"
+        "imgVizq imgC imgC imgVder"
+        "imgPie imgPie imgPie imgPie";
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-column-gap: 20px;
+        padding: 10px;
+    }
+    s
+    .imgVizq{
+        grid-area: imgVizq;
+    }
+    .imgC{
+        grid-area: imgC;
+    }
+    .imgVder{
+        grid-area: imgVder;
+    }
+    .imgPie{
+        grid-area: imgPie;
+        padding-top: 20px;
+    }
+    .grid-card
+        {
+            display: grid;
+            grid-area: card;
+            grid-template-areas:
+            "titulo"
+            "parrafo"
+            "boton" ;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+
+            text-align: center;
+            background-color: lightcoral;
+            padding-bottom: 10px;
+            border: 5px white dotted;
+        }
+    
+        .titulo{
+            font-size: x-large;
+            grid-area: titulo;
+        }
+        .parrafo{
+            font-size: large;
+            grid-area: parrafo
+        }
+        .boton{
+            
+            grid-area: boton;
+        }
+    .boton-boton{
+        font-size: x-large;
+    
+    }
+    .carrusel{    
+        background-image: url("../assets/img/salon2.png"); /* nos traemos img para un background */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        align-items: center;
+    }
+    /*MAIN NOSOTROS*/
+.grid-main-nosotros{
+    background-color: rgb(255, 212, 195);
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "presentacion"
+    "boton" ;
+    grid-template-columns: 100% ;
+    grid-template-rows: 80% 20%;
+}
+
+.grid-presentacion-nosotros{
+    display: grid;
+    grid-area: presentacion;
+    grid-template-areas: 
+    "imgnosotros historia"
+    "hito hito";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    
+}
+.grid-hito
+{
+    grid-area: hito;
+    display: grid;
+    grid-template-areas: 
+    "subhito"
+    "hitoimg";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    background-color: salmon;
+
+}
+.subHito{
+    grid-area: subhito;
+    text-align: center;
+    color: white;
+}
+.hitoV{
+    display: none;
+}
+.hitoH{
+    text-align: center;
+    grid-area: hitoimg ;
+    width: 60%;
+    padding-left: 300px;
+}
+.grid-boton-nosotros{
+    grid-area: boton;
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+    padding-top: 10px;
+}
+.imgNosotros{
+    grid-area: imgnosotros;
+    padding-top: 20px;
+
+}
+.grid-card-nosotros{
+    display: grid;
+    grid-area: historia;
+    grid-template-areas: 
+    "titulo"
+    "subtitulo"
+    "parrafo";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+
+}
+.titulo-nosotros{
+    grid-area: titulo;
+    text-align: center;
+}
+.subtitulo-nosotros{
+    grid-area: subtitulo;
+    text-align: center;
+}
+.parrafo-nosotros{
+    grid-area: parrafo;
+    text-align: center;
+}
+.boton-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: x-large;
+    
+}
+/*MAIN SERVICIOS*/
+.grid-main-servicios{
+    background-color: rgb(255, 212, 195);
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "servicios"
+    "spam" ;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto auto auto;
+}
+.spam{
+    grid-area: spam;
+    align-items: center;
+}
+
+.titulo-servicios{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+.grid-servicios{
+    display: grid;
+    grid-area: servicios;
+    grid-template-areas: 
+    "titulo1 titulo2 titulo3"
+    "img1 img2 img3";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto;
+    padding-bottom: 20px;
+}
+.titulo-unas{
+    grid-area: titulo1;
+    text-align: center;
+}
+.img-unas{
+    grid-area: img1;
+    width: 80%;
+    height: auto;
+}
+.titulo-pestanas{
+    grid-area: titulo2;
+    text-align: center;
+}
+.img-pestanas{
+    grid-area: img2;
+    width: 80%;
+    height: auto;
+
+}
+.titulo-balayage{
+    grid-area: titulo3;
+    text-align: center;
+}
+.img-balayage{
+    grid-area: img3;
+    width: 80%;
+    height: auto;
+}
+/*MAIN CONTACTO*/
+.grid-main-contacto{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "contacto" ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: beige;
+}
+.titulo-contacto{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.grid-contacto{
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.contacto-item{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*MAIN UBICACION*/
+.main-grid-ubicacion{
+    display: grid;
+    background-color: blanchedalmond;
+    grid-template-areas:
+    "titulo"
+    "direccion"
+    "mapa" ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    padding-bottom: 20px;
+}
+.titulo-ubicacion{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+.direccion-ubicacion{
+    grid-area: direccion;
+    display: flex;
+    justify-content: center;
+}
+.mapa-ubicacion{
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+}
+
+    /*FOOTER*/
+    
+.grid-foo{
+    grid-area: footer;
+    display: grid;
+    grid-template-areas:
+    "logo rrss" ;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    background-color: lightskyblue;
+
+}
+.grid-logo-foo{
+    grid-area: logo;
+    display: grid;
+    grid-template-areas:
+    "logo"
+    "sublogo";
+    grid-template-columns: 100%;
+    grid-template-areas: auto auto;
+    align-content: center;
+
+}
+.logo-foo-principal{
+    grid-area: logo;
+}
+.img-60{
+width: 40%;
+height: auto;
+}
+.logo-foo-sub{
+    grid-area: sublogo;
+}
+.grid-rrss-foo{
+    grid-area: rrss;
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "redes" ;
+    grid-template-columns: 100%;
+    grid-template-areas: auto auto;
+    
+}
+.titulo-foo{
+    grid-area: titulo;
+}
+.grid-redes-foo{
+    grid-area: redes;
+    display: grid;
+    grid-template-areas:
+    "whatsapp instagram facebook";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: auto ;
+
+}
+.footer_whatsapp{
+    grid-area: whatsapp;
+}
+.footer_instagram{
+    grid-area: instagram;
+}
+.footer_facebook{
+    grid-area: facebook;
+}
+
+}
+
+/*Mobile*/
+@media only screen and (max-width: 768px)
+{
+    
+    .logoImagen{
+        padding-top: 30px;
+        width: 150px;
+        height: 50px;
+    }
+    .nav-color{
+            
+            color:white;
+    }
+
+    /*GRID HEADER*/
+    a{
+        text-decoration: none;
+        font-size: small;
+    }
+    .grid-header-new{
+        grid-area: header;
+        position: sticky;
+        top: 0;
+        border: inset 5px white;
+        display: grid;
+        grid-template-areas:
+        "logo nav" ;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto;
+        background-color: lightcoral;
+    }
+    .logo{
+        display: flex;
+        grid-area: logo;
+        justify-content: flex-start;
+    }
+    .grid-nav{
+        font-size: x-large;
+        grid-area: nav;
+        display: flex;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    
+  
+    }
+    .nav-color{
+        color:white;
+    }
+    /*MAIN HOME*/
+    .grid-main{
+        background-color: bisque;
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+        "carrusel"
+        "card" ;
+        grid-template-columns: 100% ;
+        grid-template-rows: auto auto;
+    }
+    
+    .imgVizq{
+        grid-area: carrusel;
+    }
+    .imgC{
+        grid-area: imgC;
+        display: none;
+    }
+    .imgVder{
+        grid-area: imgVder;
+        display: none;
+    }
+    .imgPie{
+        grid-area: imgPie;
+        display: none;
+    }
+    .grid-card
+    {
+        display: grid;
+        grid-area: card;
+        grid-template-areas:
+        "titulo"
+        "parrafo"
+        "boton" ;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        
+        align-items: center;
+        background-color: lightcoral;
+        padding-bottom: 5px;
+        border: 5px white dotted;
+    }
+
+    .titulo{
+        grid-area: titulo;
+        display: flex;
+        text-align: center;
+        font-size: xx-large;
+    }
+    .parrafo{
+        grid-area: parrafo;
+        display: flex;
+        justify-content: center;
+        font-size: x-large;
+        
+    }
+    .boton{
+        grid-area: boton;
+    }
+    .boton-boton{
+        width: 100%;
+        height: auto;
+        font-size: xx-large;
+    }
+    
+    .carrusel{    
+        background-image: url("../assets/img/salon2.png"); /* nos traemos img para un background */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px;
+        
+    }
+
+    /*MAIN NOSOTROS*/
+.grid-main-nosotros{
+    background-color: rgb(255, 212, 195);
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "presentacion"
+    "boton" ;
+    grid-template-columns: 100% ;
+    grid-template-rows: 80% 20%;
+}
+
+.grid-presentacion-nosotros{
+    display: grid;
+    grid-area: presentacion;
+    grid-template-areas: 
+    "imgnosotros"
+    "historia"
+    "hito";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    
+}
+.grid-hito
+{
+    grid-area: hito;
+    display: grid;
+    grid-template-areas: 
+    "subhito"
+    "hitoimg";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    background-color: salmon;
+    padding-bottom: 50px;
+
+}
+.subHito{
+    grid-area: subhito;
+    text-align: center;
+    color: white;
+}
+.hitoV{
+    grid-area: hitoimg;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+}
+.hitoH{
+    display: none;
+    text-align: center;
+    grid-area: hitoimg ;
+    width: 60%;
+    padding-left: 400px;
+}
+.grid-boton-nosotros{
+    padding-bottom: 30px;
+    grid-area: boton;
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+}
+.imgNosotros{
+    grid-area: imgnosotros;
+    padding-top: 20px;
+
+}
+.grid-card-nosotros{
+    display: grid;
+    grid-area: historia;
+    grid-template-areas: 
+    "titulo"
+    "subtitulo"
+    "parrafo";
+    grid-template-columns: 100%;
+    grid-template-areas: auto auto auto;
+
+}
+.titulo-nosotros{
+    grid-area: titulo;
+    text-align: center;
+}
+.subtitulo-nosotros{
+    grid-area: subtitulo;
+    text-align: center;
+}
+.parrafo-nosotros{
+    grid-area: parrafo;
+    text-align: center;
+}
+.boton-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: x-large;
+    
+}
+    
+/*MAIN SERVICIOS*/
+.grid-main-servicios{
+    background-color: rgb(255, 212, 195);
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "servicios"
+    "spam" ;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto auto auto;
+    padding-left: 70px;
+}
+.spam{
+    grid-area: spam;
+    align-items: center;
+}
+
+.titulo-servicios{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+.grid-servicios{
+    display: grid;
+    grid-area: servicios;
+    grid-template-areas: 
+    "titulo1"
+    "img1"
+    "titulo2"
+    "img2"
+    "titulo3"
+    "img3"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto;
+    padding-bottom: 20px;
+    align-items: center;
+}
+.titulo-unas{
+    grid-area: titulo1;
+    text-align: center;
+}
+.img-unas{
+    grid-area: img1;
+    width: 80%;
+    height: auto;
+}
+.titulo-pestanas{
+    grid-area: titulo2;
+    text-align: center;
+}
+.img-pestanas{
+    grid-area: img2;
+    width: 80%;
+    height: auto;
+
+}
+.titulo-balayage{
+    grid-area: titulo3;
+    text-align: center;
+}
+.img-balayage{
+    grid-area: img3;
+    width: 80%;
+    height: auto;
+}
+/*MAIN CONTACTO*/
+.grid-main-contacto{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "contacto" ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: beige;
+}
+.titulo-contacto{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.grid-contacto{
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.contacto-item{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*MAIN UBICACION*/
+.main-grid-ubicacion{
+    display: grid;
+    background-color: blanchedalmond;
+    grid-template-areas:
+    "titulo"
+    "direccion"
+    "mapa" ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    padding-bottom: 20px;
+}
+.titulo-ubicacion{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+.direccion-ubicacion{
+    grid-area: direccion;
+    display: flex;
+    justify-content: center;
+}
+.mapa-ubicacion{
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+}
+
+    /*GRID FOOTER*/
+
+.grid-foo{
+    display: grid;
+    grid-template-areas:
+    "logo rrss"
+     ;
+    grid-template-columns: 30% 70%;
+    grid-template-rows:  auto;
+    background-color: rgb(54, 177, 253);
+
+}
+.grid-logo-foo{
+    grid-area: logo;
+    display: grid;
+    grid-template-areas:
+    "logo"
+    "sublogo";
+    grid-template-columns: 100%;
+    grid-template-areas: auto auto;
+    align-content: center;
+    
+}
+.logo-foo-principal{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+.img-60{
+width: 80%;
+height: auto;
+}
+.logo-foo-sub{
+    grid-area: sublogo;
+    display: flex;
+    justify-content: center;
+}
+.grid-rrss-foo{
+    grid-area: rrss;
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "redes" ;
+    grid-template-columns: 100%;
+    grid-template-areas: auto auto;
+
+}
+.titulo-foo{
+    grid-area: titulo;
+}
+.grid-redes-foo{
+    grid-area: redes;
+    display: grid;
+    grid-template-areas:
+    "whatsapp instagram facebook";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: auto ;
+
+}
+.footer_whatsapp{
+    grid-area: whatsapp;
+}
+.footer_instagram{
+    grid-area: instagram;
+}
+.footer_facebook{ 
+    grid-area: facebook;
+}
+
+}
+
+/*Tablet*/
+@media only screen and (min-width: 769px) and (max-width: 1023px)
+{  
+    /*GRID HEADER*/
+.grid-header-new{
+    position: sticky;
+    top: 0;
+    border: inset 10px white;
+    display: grid;
+    grid-template-areas:
+    "logo nav"  ;
+    grid-template-columns: 30% 70%;
+    
+    grid-template-rows: auto;
+    background-color: lightcoral;
+}
+.logoImagen{
+    display: flex;
+    justify-content: center;
+    grid-area: logo;       
+    padding: 33px;
+}
+.grid-nav{
+    grid-area: nav;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    font-size: 25px;
+}
+.nav-color{
+    color:white;
+}
+
+ /*MAIN HOME*/
+ .grid-main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "carrusel"
+    "card" ;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto auto;
+}
+.grid-carrusel{
+    grid-area: carrusel;
+    grid-template-areas: 
+    "imgC"
+    "imgPie";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+
+}
+.imgVder{
+    display: none;
+}
+.imgVizq{
+    display: none;
+}
+.imgC{
+    grid-area: imgC;
+}
+.imgPie{
+    grid-area: imgPie;
+
+}
+.grid-card
+{
+    display: grid;
+    grid-area: card;
+    grid-template-areas:
+    "titulo"
+    "parrafo"
+    "boton" ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    background-color: lightcoral;
+    padding-bottom: 5px;
+    border: 5px white dotted;
+}
+
+.titulo{
+    grid-area: titulo;
+    display: flex;
+    text-align: center;
+    font-size: xx-large;
+}
+.parrafo{
+    grid-area: parrafo;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    
+}
+.boton{
+    grid-area: boton;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+.boton-boton{
+    width: 586px;
+    height: 107px;
+    font-size: xx-large;
+}
+
+.carrusel{    
+    background-image: url("../assets/img/salon2.png"); /* nos traemos img para un background */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    
+}
+
+
+/*MAIN  NOSOTROS*/
+.grid-main-nosotros{
+    background-color: rgb(255, 255, 202);
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "presentacion"
+    "boton" ;
+    grid-template-columns: 100% ;
+    grid-template-rows: 80% 20%;
+}
+
+.grid-presentacion-nosotros{
+    display: grid;
+    grid-area: presentacion;
+    grid-template-areas: 
+    "imgnosotros"
+    "historia"
+    "hito";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    
+}
+.grid-hito
+{
+    grid-area: hito;
+    display: grid;
+    grid-template-areas: 
+    "subhito"
+    "hitoimg";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    background-color: salmon;
+
+}
+.subHito{
+    grid-area: subhito;
+    text-align: center;
+    color: white;
+}
+.hitoV{
+    display: none;
+}
+.hitoH{
+    text-align: center;
+    grid-area: hitoimg ;
+    width: 60%;
+   padding-left: 150px;
+}
+.grid-boton-nosotros{
+    grid-area: boton;
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+    padding-top: 10px;
+}
+.imgNosotros{
+    grid-area: imgnosotros;
+    padding-top: 20px;
+
+}
+.grid-card-nosotros{
+    display: grid;
+    grid-area: historia;
+    grid-template-areas: 
+    "titulo"
+    "subtitulo"
+    "parrafo";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+
+}
+.titulo-nosotros{
+    grid-area: titulo;
+    text-align: center;
+}
+.subtitulo-nosotros{
+    grid-area: subtitulo;
+    text-align: center;
+}
+.parrafo-nosotros{
+    grid-area: parrafo;
+    text-align: center;
+}
+.boton-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: x-large;
+    
+}
+
+/*MAIN SERVICIOS*/
+.grid-main-servicios{
+    background-color: rgb(255, 212, 195);
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "servicios"
+    "spam" ;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto auto auto;
+
+    padding-left: 134px;
+}
+.spam{
+    grid-area: spam;
+    align-items: center;
+}
+
+.titulo-servicios{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+.grid-servicios{
+    display: grid;
+    grid-area: servicios;
+    grid-template-areas: 
+    "titulo1"
+    "img1"
+    "titulo2"
+    "img2"
+    "titulo3"
+    "img3"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto;
+    padding-bottom: 20px;
+    align-items: center;
+}
+.titulo-unas{
+    grid-area: titulo1;
+    text-align: center;
+}
+.img-unas{
+    grid-area: img1;
+    width: 80%;
+    height: auto;
+}
+.titulo-pestanas{
+    grid-area: titulo2;
+    text-align: center;
+}
+.img-pestanas{
+    grid-area: img2;
+    width: 80%;
+    height: auto;
+
+}
+.titulo-balayage{
+    grid-area: titulo3;
+    text-align: center;
+}
+.img-balayage{
+    grid-area: img3;
+    width: 80%;
+    height: auto;
+}
+
+/*MAIN CONTACTO*/
+.grid-main-contacto{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "contacto" ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: beige;
+}
+.titulo-contacto{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.grid-contacto{
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.contacto-item{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*MAIN UBICACION*/
+.main-grid-ubicacion{
+    display: grid;
+    background-color: blanchedalmond;
+    grid-template-areas:
+    "titulo"
+    "direccion"
+    "mapa" ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    padding-bottom: 20px;
+}
+.titulo-ubicacion{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+.direccion-ubicacion{
+    grid-area: direccion;
+    display: flex;
+    justify-content: center;
+}
+.mapa-ubicacion{
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+}
+   
+/*GRID FOOTER*/
+
+.grid-foo{
+    display: grid;
+    grid-template-areas:
+    "logo rrss" ;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    background-color: lightblue;
+
+}
+.grid-logo-foo{
+    grid-area: logo;
+    display: grid;
+    grid-template-areas:
+    "logo"
+    "sublogo";
+    grid-template-columns: 100%;
+    grid-template-areas: auto auto;
+    align-content: center;
+
+}
+.logo-foo-principal{
+    grid-area: logo;
+}
+.img-60{
+width: 60%;
+height: auto;
+}
+.logo-foo-sub{
+    grid-area: sublogo;
+}
+.grid-rrss-foo{
+    grid-area: rrss;
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "redes" ;
+    grid-template-columns: 100%;
+    grid-template-areas: auto auto;
+
+}
+.titulo-foo{
+    grid-area: titulo;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.grid-redes-foo{
+    grid-area: redes;
+    display: grid;
+    grid-template-areas:
+    "whatsapp instagram facebook";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: auto ;
+
+}
+.footer_whatsapp{
+    grid-area: whatsapp;
+}
+.footer_instagram{
+    grid-area: instagram;
+}
+.footer_facebook{
+    grid-area: facebook;
+}
+
+}
+
